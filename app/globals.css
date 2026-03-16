@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
-/* Brand color palette — change these to adjust the look of the whole site */
+/* Brand color palette — matches the original 7thstreetconcerts.org branding */
 :root {
-  --color-cream: #faf8f4;       /* warm off-white background */
-  --color-ink: #1c1a17;         /* near-black text */
-  --color-ink-soft: #4a4640;    /* secondary text */
-  --color-accent: #2d5d4b;      /* deep green — used for buttons, links, highlights */
-  --color-accent-light: #eaf2ee; /* very light green — used for card backgrounds */
-  --color-rule: #ddd8d0;        /* subtle divider lines */
+  --color-cream: #F9FAFB;       /* light gray background */
+  --color-ink: #333333;          /* body text */
+  --color-ink-soft: #666666;     /* secondary text */
+  --color-accent: #FF0099;       /* hot magenta — CTAs, headings, highlights */
+  --color-accent-light: #FBF3FB; /* light pink tint for card backgrounds */
+  --color-rule: #e0e0e0;         /* subtle divider lines */
+  --color-navy: #001A4D;         /* dark navy — hero sections, footer */
+  --color-cyan: #0099FF;         /* bright blue — social bar, secondary accent */
+  --color-orange: #FF9900;       /* orange — tertiary accent */
 }
 
 @theme inline {
@@ -17,22 +20,25 @@
   --color-accent: var(--color-accent);
   --color-accent-light: var(--color-accent-light);
   --color-rule: var(--color-rule);
+  --color-navy: var(--color-navy);
+  --color-cyan: var(--color-cyan);
+  --color-orange: var(--color-orange);
 
-  --font-display: var(--font-playfair);
-  --font-body: var(--font-lato);
+  --font-display: var(--font-abril);
+  --font-body: var(--font-montserrat);
 }
 
 body {
   background-color: var(--color-cream);
   color: var(--color-ink);
-  font-family: var(--font-lato), system-ui, sans-serif;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-abril), Georgia, serif;
 }

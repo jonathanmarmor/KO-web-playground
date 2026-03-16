@@ -2,10 +2,11 @@
 
 export const siteConfig = {
   siteName: "7th Street Concerts",
-  tagline: "Live music in an intimate setting", // ← Kristin: update this with your tagline
-  contactEmail: "info@7thstreetconcerts.org",  // ← update with real email
+  tagline: "Charlotte's Unexpected Concert Series",
+  contactEmail: "contact@7thstreetconcerts.org",
   instagramUrl: "",   // ← paste your Instagram URL here, e.g. "https://instagram.com/..."
   facebookUrl: "",    // ← paste your Facebook URL here
+  linkedInUrl: "",    // ← paste your LinkedIn URL here
   mailingListUrl: "", // ← paste your mailing list signup URL here (e.g. Mailchimp)
 };
 

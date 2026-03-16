@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Lato, Playfair_Display } from "next/font/google";
+import { Abril_Fatface, Montserrat } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "./config";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const abril = Abril_Fatface({
+  variable: "--font-abril",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${lato.variable} antialiased`}>
+      <body className={`${abril.variable} ${montserrat.variable} antialiased`}>
         {children}
       </body>
     </html>
