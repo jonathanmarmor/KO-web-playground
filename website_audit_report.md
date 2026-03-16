@@ -1,7 +1,7 @@
 # 7th Street Concerts — Website Audit Report
 
-Analysis of approximately half the pages of the current 7thstreetconcerts.org website, based on
-screenshots, HTML, and text captures. The site serves a Charlotte, NC nonprofit presenting
+Analysis of the full set of captured pages from the current 7thstreetconcerts.org website, based
+on screenshots, HTML, and text captures. The site serves a Charlotte, NC nonprofit presenting
 classical/chamber music in intimate settings with a strong community outreach component.
 
 ---
@@ -21,7 +21,14 @@ classical/chamber music in intimate settings with a strong community outreach co
 | Partners | `/partners` | Corporate sponsorship tiers |
 | In The News | `/in-the-news` | Press coverage links |
 | Concert: Ensemble Decoda | `/ensemble-decoda-concert` | Individual concert page (2024 season) |
-| Concert: Gesualdo Six | `/gesualdo-six` | Individual concert page (minimal content) |
+| Concert: Gesualdo Six (video) | `/gesualdo-six` | Full-page embedded video landing page |
+| Concert: Renaissance Voices — Gesualdo Six | `/renaissance-voices-the-gesualdo-six` | Full individual concert page (Feb 2025) |
+| Concert: Music for the Winter Solstice | `/music-for-the-winter-solstice` | Individual concert page (Dec 2024) |
+| Concert: The Poetry of Music — Poiesis Quartet + Junious Ward | `/the-poetry-of-music-the-poiesis-quartet-poet-junious-ward` | Individual concert page (March 2025) |
+| Concert: Scenes From a Paris Cafe | `/scenes-from-a-paris-cafe` | Individual concert page (March 2026) |
+| Concert: The Trout Who Found the River | `/the-trout-who-found-the-river` | Individual concert page (April 2026) |
+| Outreach (video): Poiesis at Carolinas Medical Center | `/poiesis-string-quartet-live-at-carolinas-medical-center` | Full-page embedded video landing page |
+| Special Event: Music + Technology Hackathon | `/shout-weekend-hackathon` | Free participatory event page (April 2024) |
 | Thank You | `/thank-you` | Post-donation confirmation |
 
 Note: A `/home-2` page also exists in the captured files but appears to be an unpublished draft —
@@ -120,29 +127,87 @@ be a collapsible section or omitted from the main nav entirely.
 
 ---
 
-### 4. Individual Concert Pages ⚠️ KEEP FORMAT (fix inconsistency)
+### 4. Individual Concert Pages ✅ KEEP (standardize on best examples)
 
-**Ensemble Decoda page:** Date, description, reception note, ticket button. Simple but functional.
-Also includes a compelling detail: the concert will feature a piece created at a "Hackathon" with
-audience members credited as composers in the program — excellent storytelling.
+The site has a wider range of individual concert page quality than initially apparent — from
+excellent to stub — and the best examples are genuinely strong:
 
-**Gesualdo Six page:** Nearly empty (279 bytes of text captured). A credibility problem — visitors
-who click through find almost nothing.
+**Best example — Scenes From a Paris Cafe:** Buy tickets button at top *and* bottom, concert
+format details embedded in the body (doors 3:30 PM, happy hour, concert 4:00 PM, post-concert
+reception), full artist bios for both performers, evocative program description. This page should
+be the template model for all new concert pages.
 
-**Recommendation:** Create a reusable template for every concert page:
+**Other strong pages:** Renaissance Voices (Gesualdo Six) has a full bio, program description, and
+three major press quotes (The Times, BBC Music Magazine, Gramophone). The Trout Who Found the
+River has a detailed program narrative plus an extensive composer bio. The Poetry of Music
+(Poiesis + Junious Ward) has full bios for both the ensemble and the poet. Music for the Winter
+Solstice has a full cast list and repertoire summary.
+
+**Ensemble Decoda:** Date, description, reception note, ticket button. Simple but functional, and
+includes a compelling storytelling detail about the Hackathon piece.
+
+**Recommendation:** Use Scenes From a Paris Cafe as the template. Every concert page should have:
 - Title + date/time/venue
 - Evocative program description
 - Performer bios with photos
 - Program notes or repertoire preview
-- Ticket button (prominent)
+- Ticket button (prominent, at top and bottom)
 - Companion outreach event mention (if applicable)
 - Post-concert reception note
 
-Unpopulated pages should redirect to the season page rather than exist as stubs.
+---
+
+### 5. Video Landing Pages ✅ KEEP (formalize as a page type)
+
+Two pages that appear to have only footer content in text captures actually contain full-page
+embedded videos:
+- `/gesualdo-six` — concert video
+- `/poiesis-string-quartet-live-at-carolinas-medical-center` — outreach performance video
+
+These pages were created specifically to give a shareable 7thstreetconcerts.org URL that goes
+directly to a video — a clean, on-brand link for social media or email rather than a raw YouTube
+or Vimeo URL.
+
+**What works:**
+- Keeps visitors on the org's domain rather than sending them off-site
+- A branded, memorable URL (e.g., `/gesualdo-six`) is more shareable than a video platform link
+- Reinforces that 7th Street captures and shares its performances
+
+**What to improve:**
+- The pages are bare — just the video with no surrounding context
+- No concert details, no artist info, no CTA (donate, subscribe, buy tickets for next show)
+- No connection to the rest of the site
+
+**Recommendation:** Formalize this as a standard page type. Keep the full-page video as the hero,
+but add below it: the concert title and date, a short paragraph about the performance, a newsletter
+signup CTA, and a link to the next upcoming concert. This turns a one-time share into a genuine
+entry point to the organization.
 
 ---
 
-### 5. Gallery Page ✅ KEEP (reorganize)
+### 6. Special / Participatory Event Pages ✅ KEEP (expand)
+
+The Music + Technology Hackathon (`/shout-weekend-hackathon`, April 5) is a distinct third
+programming type beyond ticketed concerts and community outreach: a free, all-day participatory
+event open to musicians, composers, technologists, and curious members of the public. Led by
+Jonathan Marmor (Director of Engineering at Spotify), Teresa Nakra (Stevens Institute), Eric
+Rosenbaum (founder of Makey Makey), and others, with Ensemble Decoda presenting on performing
+with technology.
+
+This reveals that 7th Street's programming actually spans three categories:
+1. **Ticketed main stage concerts** — the core product
+2. **Free community outreach** — hospital, shelter, school performances
+3. **Special participatory events** — Hackathon, Charlotte SHOUT! open-air showings, artist
+   conversation evenings
+
+**Implication for the new site:** The nav label "Concerts" is too narrow. A label like **"Events"**
+or **"Programs"** would better encompass all three types and allow each to be presented clearly
+without awkwardly forcing a Hackathon or a free outdoor festival showing into the same template as
+a ticketed chamber concert.
+
+---
+
+### 7. Gallery Page ✅ KEEP (reorganize)
 
 **What it contains:**
 - 2025-26 season: Luz de Navidad rehearsal + performance + post-concert photos (photo credit:
@@ -168,7 +233,7 @@ Outreach**. Add captions consistently (who, where, when). Standardize photo cred
 
 ---
 
-### 6. Donate Page ✅ KEEP (expand)
+### 8. Donate Page ✅ KEEP (expand)
 
 **What it contains:**
 - "Donate Now" button (external processor)
@@ -190,7 +255,7 @@ outreach performances at hospitals, shelters, and schools." Add a recurring givi
 
 ---
 
-### 7. Partners Page ✅ KEEP (merge with Donate)
+### 9. Partners Page ✅ KEEP (merge with Donate)
 
 **What it contains:**
 Four corporate sponsorship tiers:
@@ -219,7 +284,7 @@ existing sponsor would strengthen the pitch.
 
 ---
 
-### 8. Join / Mailing List Page ✅ KEEP (integrate everywhere)
+### 10. Join / Mailing List Page ✅ KEEP (integrate everywhere)
 
 **What it contains:**
 - Email, first name, last name fields
@@ -238,7 +303,7 @@ for direct links from social ads.
 
 ---
 
-### 9. In The News Page ⚠️ KEEP (expand significantly)
+### 11. In The News Page ⚠️ KEEP (expand significantly)
 
 **What it contains:**
 - Four outlet links: Spectrum News, Reader's Picks: Favorite Local Charities, Art on My Sleeve,
@@ -258,7 +323,7 @@ just connected to a few links.
 
 ---
 
-### 10. Thank You Page ✅ KEEP (add next steps)
+### 12. Thank You Page ✅ KEEP (add next steps)
 
 **What it contains:**
 - "Thank you for your donation. Your gift goes directly to support 7th Street Concerts and helps
@@ -317,6 +382,14 @@ A simple "Get Involved" section (volunteer, bring a group, suggest an outreach v
 post-concert reception) could convert casual visitors into active community members beyond just
 donors.
 
+### I. Video / Recording Archive
+The Trout Who Found the River page includes a "Listen on Spotify" link, and at least two pages
+exist specifically to host embedded performance videos. The new site should treat recordings as
+first-class content: a consistent "Watch" or "Listen" section on each concert page (where a
+recording exists), and a browsable archive of past performance videos. This extends the audience
+beyond those who attended in person and gives new visitors a way to experience the quality before
+buying tickets.
+
 ---
 
 ## What to LEAVE OUT
@@ -326,10 +399,12 @@ The current board list — just names — adds no value to a visitor. Options: g
 brief bios explaining their connection to the mission (like Rob Smith's does), or move this
 information entirely off the main site.
 
-### 2. Sparse Individual Concert Pages
-Concert pages with almost no content (like the Gesualdo Six page) damage credibility. In the new
-site, either populate every individual concert page fully using the template above, or don't
-create them until they're ready — redirect stubs to the season overview page.
+### 2. Unpopulated Concert Page Stubs
+If a concert page isn't ready to go live with full content, don't publish it — redirect to the
+season overview page instead. The `/gesualdo-six` URL, for example, is a video landing page, not
+an informational concert page; the full concert information lives at
+`/renaissance-voices-the-gesualdo-six`. The new site should be clear about which URL serves which
+purpose and avoid leaving dead-end pages that confuse visitors.
 
 ### 3. Standalone Join Page as Primary CTA
 The `/join` page works as a landing destination for external links, but shouldn't be a main nav
@@ -344,13 +419,16 @@ item competing with higher-priority destinations. Embed signup forms throughout 
 **Proposed nav:**
 | Item | Contents |
 |------|----------|
-| **Home** | Hero with season theme, next concert CTA, community impact snapshot, newsletter signup |
-| **Concerts** | Season overview + individual concert pages |
+| **Home** | Hero with season theme, next event CTA, community impact snapshot, newsletter signup |
+| **Events** | Season overview + individual concert pages + special events (Hackathon etc.) |
 | **About** | Mission, Kristin's story, concert experience, history |
 | **Community** | Outreach mission, past outreach events, impact stats, get involved |
-| **Gallery** | Filterable photo archive (Season / Outreach / Archive) |
+| **Gallery** | Filterable photo + video archive (Season / Outreach / Past Seasons) |
 | **Support Us** | Individual donate + corporate sponsorship tiers combined |
 | **Press** | Expanded coverage with headlines, excerpts, dates |
+
+Note: "Concerts" is replaced with "Events" to encompass all three programming types: ticketed
+main stage concerts, free community outreach, and special participatory events like the Hackathon.
 
 **Footer (persistent on all pages):**
 - Newsletter signup form
@@ -364,19 +442,22 @@ item competing with higher-priority destinations. Embed signup forms throughout 
 
 | Section | Current State | Recommendation |
 |---------|--------------|----------------|
-| Home | Good structure, weak CTAs | Strengthen: season theme + next concert CTA front and center |
+| Home | Good structure, weak CTAs | Strengthen: season theme + next event CTA front and center |
 | About | Good content, cluttered | Streamline; relocate press to In The News |
-| Season/Concerts | Good narrative, inconsistent sub-pages | Keep; standardize per-concert template |
-| Gallery | Large but unorganized | Keep; add captions, filters, photo credits |
+| Season/Events | Good narrative, some inconsistent sub-pages | Keep; rename to Events; standardize per-concert template |
+| Individual Concert Pages | Variable — best are excellent (Paris Cafe, Gesualdo Six, Trout) | Use Scenes From a Paris Cafe as template |
+| Video Landing Pages | Functional but bare | Formalize: keep full-page video, add context + CTAs below |
+| Special Event Pages | Hackathon page exists but pattern not repeated | Formalize as a third content type under Events |
+| Gallery | Large but unorganized | Keep; add captions, filters (Season / Outreach / Archive), video |
 | Donate | Too sparse | Expand with impact language; merge with Partners |
 | Partners | Good tiers, separated from Donate | Merge into Support Us |
 | Join | Functional but isolated page | Embed throughout; keep as landing page only |
 | In The News | Nearly empty | Expand with headlines, excerpts, dates, logos |
-| Thank You | Warm language | Add next-step CTAs (subscribe, share, concerts) |
-| Individual Concert Pages | Inconsistent quality | Standardize with a reusable template |
+| Thank You | Warm language | Add next-step CTAs (subscribe, share, upcoming events) |
 | Community Impact | Absent as dedicated content | **ADD** as section or page |
 | Artist Profiles | Absent | **ADD** inline on concert pages |
 | Accessibility Info | Absent | **ADD** to About/venue section |
 | Social Media | Absent from navigation | **ADD** links in header/footer |
 | Past Seasons Archive | Scattered in Gallery | **ADD** as organized section |
 | Volunteer/Get Involved | Absent | **ADD** in Community section |
+| Video / Recording Archive | Ad hoc (2 video pages, 1 Spotify link) | **ADD** as consistent feature on concert pages + browsable archive |
