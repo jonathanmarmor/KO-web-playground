@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Lato, Playfair_Display } from "next/font/google";
+import { Montserrat, Abril_Fatface } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "./config";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const abril = Abril_Fatface({
+  variable: "--font-abril",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased min-h-screen flex flex-col`}
+        className={`${abril.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col`}
       >
         <Nav />
         <main className="flex-1">{children}</main>

@@ -20,15 +20,15 @@ function EventRow({ event }: { event: Event }) {
   return (
     <Link
       href={`/events/${event.slug}`}
-      className="block py-8 border-b border-[--color-rule] grid md:grid-cols-[200px_1fr] gap-4 hover:bg-[--color-accent-light] -mx-4 px-4 rounded transition-colors"
+      className="block py-8 border-b border-[--color-rule] grid md:grid-cols-[200px_1fr] gap-4 hover:bg-[--color-bg-alt] -mx-4 px-4 rounded transition-colors"
     >
       <div>
-        <p className="font-bold text-[--color-accent] text-sm uppercase tracking-widest">
+        <p className="font-bold text-[--color-magenta] text-sm uppercase tracking-widest">
           {formatDate(event.date)}
         </p>
         <p className="text-[--color-ink-soft] text-sm">{event.time}</p>
         {event.isFree && (
-          <span className="inline-block mt-1 text-xs font-bold text-[--color-accent] uppercase tracking-widest">
+          <span className="inline-block mt-1 text-xs font-bold text-[--color-magenta] uppercase tracking-widest">
             Free
           </span>
         )}
@@ -45,7 +45,7 @@ function EventRow({ event }: { event: Event }) {
           </p>
         )}
         {event.ticketUrl && (
-          <span className="inline-block mt-2 px-5 py-2 bg-[--color-accent] text-white text-sm rounded">
+          <span className="inline-block mt-2 px-5 py-2 bg-[--color-magenta] text-white text-sm rounded-full">
             Get Tickets
           </span>
         )}
@@ -60,7 +60,7 @@ export default function EventsPage() {
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Season intro */}
         <div className="space-y-4">
-          <h1 className="text-4xl font-[--font-display]">Events</h1>
+          <h1 className="text-4xl font-[--font-display] text-[--color-magenta]">Events</h1>
           <p className="text-lg text-[--color-ink-soft] leading-relaxed max-w-2xl">
             {siteConfig.seasonTagline}
           </p>

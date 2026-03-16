@@ -26,7 +26,7 @@ export default function GalleryPage() {
   return (
     <div className="px-6 py-16">
       <div className="max-w-4xl mx-auto space-y-10">
-        <h1 className="text-5xl font-[--font-display]">Gallery</h1>
+        <h1 className="text-5xl font-[--font-display] text-[--color-magenta]">Gallery</h1>
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-2">
@@ -36,8 +36,8 @@ export default function GalleryPage() {
               onClick={() => setActiveTab(tab.value)}
               className={`px-4 py-2 text-sm rounded transition-colors ${
                 activeTab === tab.value
-                  ? "bg-[--color-accent] text-white"
-                  : "bg-[--color-accent-light] text-[--color-ink-soft] hover:bg-[--color-rule]"
+                  ? "bg-[--color-magenta] text-white"
+                  : "bg-[--color-bg-alt] text-[--color-ink-soft] hover:bg-[--color-rule]"
               }`}
             >
               {tab.label}
@@ -73,7 +73,7 @@ export default function GalleryPage() {
               {quotesWithContent.slice(0, 4).map((item, i) => (
                 <blockquote
                   key={i}
-                  className="bg-[--color-accent-light] rounded-lg p-6 space-y-3"
+                  className="bg-[--color-bg-alt] rounded-lg p-6 space-y-3"
                 >
                   <p className="text-[--color-ink] italic leading-relaxed">
                     &ldquo;{item.quote}&rdquo;

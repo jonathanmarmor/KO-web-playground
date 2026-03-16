@@ -38,7 +38,7 @@ export async function generateMetadata({
 function TicketButton({ event }: { event: Event }) {
   if (event.isFree) {
     return (
-      <span className="inline-block px-6 py-3 bg-[--color-accent] text-white rounded text-sm font-bold uppercase tracking-wider">
+      <span className="inline-block px-6 py-3 bg-[--color-magenta] text-white rounded-full text-sm font-bold uppercase tracking-wider">
         Free Admission
       </span>
     );
@@ -49,7 +49,7 @@ function TicketButton({ event }: { event: Event }) {
         href={event.ticketUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block px-6 py-3 bg-[--color-accent] text-white rounded hover:opacity-90 transition-opacity text-sm font-bold uppercase tracking-wider"
+        className="inline-block px-6 py-3 bg-[--color-magenta] text-white rounded-full hover:opacity-90 transition-opacity text-sm font-bold uppercase tracking-wider"
       >
         Get Tickets
       </a>
@@ -73,14 +73,14 @@ export default async function EventPage({
         {/* Back link */}
         <Link
           href="/events"
-          className="text-sm text-[--color-accent] hover:underline"
+          className="text-sm text-[--color-magenta] hover:underline"
         >
           ← All Events
         </Link>
 
         {/* Header */}
         <div className="space-y-4">
-          <p className="text-sm font-bold tracking-widest uppercase text-[--color-accent]">
+          <p className="text-sm font-bold tracking-widest uppercase text-[--color-magenta]">
             {formatDate(event.date)} · {event.time}
           </p>
           <h1 className="text-4xl md:text-5xl font-[--font-display] leading-tight">
@@ -94,7 +94,7 @@ export default async function EventPage({
 
         {/* Concert format details */}
         {event.doorsTime && (
-          <div className="bg-[--color-accent-light] rounded-lg p-6 space-y-2">
+          <div className="bg-[--color-bg-alt] rounded-lg p-6 space-y-2">
             <p className="text-sm text-[--color-ink-soft]">
               <span className="font-bold">Doors:</span> {event.doorsTime} for
               pre-concert happy hour
@@ -120,7 +120,7 @@ export default async function EventPage({
 
         {/* Program notes */}
         {event.programNotes && (
-          <div className="bg-[--color-accent-light] rounded-lg p-6">
+          <div className="bg-[--color-bg-alt] rounded-lg p-6">
             <p className="text-[--color-ink-soft] leading-relaxed">
               {event.programNotes}
             </p>
@@ -137,12 +137,12 @@ export default async function EventPage({
               {event.performers.map((performer) => (
                 <div
                   key={performer.name}
-                  className="border-l-4 border-[--color-accent] pl-6 space-y-1"
+                  className="border-l-4 border-[--color-magenta] pl-6 space-y-1"
                 >
                   <h3 className="text-xl font-[--font-display]">
                     {performer.name}
                   </h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-[--color-accent]">
+                  <p className="text-xs font-bold tracking-widest uppercase text-[--color-magenta]">
                     {performer.credentials}
                   </p>
                   <p className="text-[--color-ink-soft] leading-relaxed">
@@ -156,7 +156,7 @@ export default async function EventPage({
 
         {/* Outreach companion */}
         {event.outreachEvent && (
-          <section className="bg-[--color-accent-light] rounded-lg p-6 space-y-2">
+          <section className="bg-[--color-bg-alt] rounded-lg p-6 space-y-2">
             <h3 className="font-[--font-display] text-lg font-semibold">
               Community Outreach
             </h3>
@@ -165,7 +165,7 @@ export default async function EventPage({
             </p>
             <Link
               href="/community"
-              className="text-sm text-[--color-accent] hover:underline"
+              className="text-sm text-[--color-magenta] hover:underline"
             >
               Learn more about our outreach mission →
             </Link>
@@ -193,7 +193,7 @@ export default async function EventPage({
             href={event.spotifyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-[--color-accent] hover:underline"
+            className="inline-block text-[--color-magenta] hover:underline"
           >
             Listen on Spotify →
           </a>

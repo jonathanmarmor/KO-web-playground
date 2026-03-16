@@ -5,7 +5,7 @@ export default function ThankYouPage() {
   return (
     <div className="px-6 py-20">
       <div className="max-w-lg mx-auto text-center space-y-8">
-        <h1 className="text-5xl font-[--font-display]">Thank You</h1>
+        <h1 className="text-5xl font-[--font-display] text-[--color-magenta]">Thank You</h1>
 
         <p className="text-[--color-ink-soft] leading-relaxed text-lg">
           Your gift goes directly to support 7th Street Concerts and helps to
@@ -16,7 +16,7 @@ export default function ThankYouPage() {
         <div className="space-y-4 pt-4">
           <Link
             href="/events"
-            className="inline-block px-8 py-3 bg-[--color-accent] text-white rounded hover:opacity-90 transition-opacity"
+            className="inline-block px-8 py-3 bg-[--color-magenta] text-white rounded-full hover:opacity-90 transition-opacity"
           >
             See Upcoming Events
           </Link>
@@ -33,7 +33,7 @@ export default function ThankYouPage() {
                 href={siteConfig.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[--color-accent] hover:underline"
+                className="text-[--color-magenta] hover:underline"
               >
                 Follow on Instagram
               </a>
@@ -43,7 +43,7 @@ export default function ThankYouPage() {
                 href={siteConfig.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[--color-accent] hover:underline"
+                className="text-[--color-magenta] hover:underline"
               >
                 Follow on Facebook
               </a>

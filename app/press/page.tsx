@@ -17,7 +17,7 @@ export default function PressPage() {
   return (
     <div className="px-6 py-16">
       <div className="max-w-2xl mx-auto space-y-12">
-        <h1 className="text-5xl font-[--font-display]">Press</h1>
+        <h1 className="text-5xl font-[--font-display] text-[--color-magenta]">Press</h1>
 
         {years.map((year) => (
           <section key={year} className="space-y-6">
@@ -28,9 +28,9 @@ export default function PressPage() {
               {byYear[year].map((item, i) => (
                 <div
                   key={i}
-                  className="border-l-4 border-[--color-accent] pl-6 space-y-2"
+                  className="border-l-4 border-[--color-magenta] pl-6 space-y-2"
                 >
-                  <p className="text-xs font-bold tracking-widest uppercase text-[--color-accent]">
+                  <p className="text-xs font-bold tracking-widest uppercase text-[--color-magenta]">
                     {item.publication}
                   </p>
                   <h3 className="text-lg font-[--font-display]">
@@ -46,7 +46,7 @@ export default function PressPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-[--color-accent] hover:underline"
+                      className="text-sm text-[--color-magenta] hover:underline"
                     >
                       Read article →
                     </a>
