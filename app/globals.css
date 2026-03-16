@@ -1,38 +1,46 @@
 @import "tailwindcss";
 
-/* Brand color palette — change these to adjust the look of the whole site */
+/* Brand color palette — matches original 7thstreetconcerts.org */
 :root {
-  --color-cream: #faf8f4;       /* warm off-white background */
-  --color-ink: #1c1a17;         /* near-black text */
-  --color-ink-soft: #4a4640;    /* secondary text */
-  --color-accent: #2d5d4b;      /* deep green — used for buttons, links, highlights */
-  --color-accent-light: #eaf2ee; /* very light green — used for card backgrounds */
-  --color-rule: #ddd8d0;        /* subtle divider lines */
+  --color-bg: #ffffff;            /* white background */
+  --color-bg-alt: #eeeded;        /* light gray alternating sections */
+  --color-ink: #333333;           /* body text */
+  --color-ink-soft: #666666;      /* secondary text, links */
+  --color-magenta: #ff0099;       /* primary CTA, headings */
+  --color-navy: #000066;          /* footer bg, hover states */
+  --color-blue: #0099ff;          /* bright blue accent */
+  --color-orange: #ff9900;        /* orange accent */
+  --color-red: #cc0000;           /* red accent */
+  --color-cyan: #33cccc;          /* turquoise accent */
+  --color-yellow: #ffcc33;        /* yellow accent */
+  --color-rule: #ddd8d0;          /* divider lines */
 }
 
 @theme inline {
-  --color-cream: var(--color-cream);
+  --color-bg: var(--color-bg);
+  --color-bg-alt: var(--color-bg-alt);
   --color-ink: var(--color-ink);
   --color-ink-soft: var(--color-ink-soft);
-  --color-accent: var(--color-accent);
-  --color-accent-light: var(--color-accent-light);
+  --color-magenta: var(--color-magenta);
+  --color-navy: var(--color-navy);
+  --color-blue: var(--color-blue);
   --color-rule: var(--color-rule);
 
-  --font-display: var(--font-playfair);
-  --font-body: var(--font-lato);
+  --font-display: var(--font-abril);
+  --font-body: var(--font-montserrat);
 }
 
 body {
-  background-color: var(--color-cream);
+  background-color: var(--color-bg);
   color: var(--color-ink);
-  font-family: var(--font-lato), system-ui, sans-serif;
+  font-family: var(--font-montserrat), Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-abril), Georgia, serif;
 }

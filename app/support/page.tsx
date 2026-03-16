@@ -4,11 +4,11 @@ export default function SupportPage() {
   return (
     <div className="px-6 py-16">
       <div className="max-w-2xl mx-auto space-y-12">
-        <h1 className="text-5xl font-[--font-display]">Support Us</h1>
+        <h1 className="text-5xl font-[--font-display] text-[--color-magenta]">Support Us</h1>
 
         {/* Individual giving */}
         <section className="space-y-4">
-          <h2 className="text-3xl font-[--font-display]">Make a Gift</h2>
+          <h2 className="text-3xl font-[--font-display] text-[--color-magenta]">Make a Gift</h2>
           <p className="text-[--color-ink-soft] leading-relaxed text-lg">
             Your donation supports free outreach performances at hospitals,
             shelters, and schools — bringing extraordinary music directly to
@@ -24,14 +24,14 @@ export default function SupportPage() {
               href={siteConfig.donateUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-[--color-accent] text-white rounded hover:opacity-90 transition-opacity text-lg"
+              className="inline-block px-8 py-3 bg-[--color-magenta] text-white rounded-full hover:opacity-90 transition-opacity text-lg"
             >
               Donate Now
             </a>
           ) : (
             <a
               href={`mailto:${siteConfig.contactEmail}?subject=Donation`}
-              className="inline-block px-8 py-3 bg-[--color-accent] text-white rounded hover:opacity-90 transition-opacity text-lg"
+              className="inline-block px-8 py-3 bg-[--color-magenta] text-white rounded-full hover:opacity-90 transition-opacity text-lg"
             >
               Contact Us to Donate
             </a>
@@ -40,7 +40,7 @@ export default function SupportPage() {
 
         {/* Corporate sponsorship */}
         <section className="pt-8 border-t border-[--color-rule] space-y-6">
-          <h2 className="text-3xl font-[--font-display]">
+          <h2 className="text-3xl font-[--font-display] text-[--color-magenta]">
             Corporate Sponsorship
           </h2>
           <p className="text-[--color-ink-soft] leading-relaxed text-lg">
@@ -63,7 +63,7 @@ export default function SupportPage() {
                     <h3 className="text-xl font-[--font-display]">
                       {tier.name}
                     </h3>
-                    <span className="text-[--color-accent] font-bold text-lg">
+                    <span className="text-[--color-magenta] font-bold text-lg">
                       ${tier.amount.toLocaleString()}
                     </span>
                   </div>
@@ -73,7 +73,7 @@ export default function SupportPage() {
                         key={i}
                         className="text-sm text-[--color-ink-soft] flex gap-2"
                       >
-                        <span className="text-[--color-accent]">·</span>
+                        <span className="text-[--color-magenta]">·</span>
                         {benefit}
                       </li>
                     ))}
@@ -82,7 +82,7 @@ export default function SupportPage() {
               ))}
           </div>
 
-          <div className="bg-[--color-accent-light] rounded-lg p-6 space-y-2">
+          <div className="bg-[--color-bg-alt] rounded-lg p-6 space-y-2">
             <p className="font-[--font-display] font-semibold">
               Custom sponsorships are available
             </p>
@@ -91,7 +91,7 @@ export default function SupportPage() {
               your goals. Contact Kristin Olson at{" "}
               <a
                 href={`mailto:${siteConfig.contactEmail}`}
-                className="text-[--color-accent] hover:underline"
+                className="text-[--color-magenta] hover:underline"
               >
                 {siteConfig.contactEmail}
               </a>{" "}

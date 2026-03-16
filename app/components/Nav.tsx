@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { siteConfig } from "../config";
 
 const navLinks = [
   { href: "/events", label: "Events" },
@@ -24,13 +23,16 @@ export default function Nav() {
   }
 
   return (
-    <nav className="border-b border-[--color-rule] px-6 py-4">
-      <div className="max-w-5xl mx-auto flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-[--font-display] text-xl font-semibold tracking-tight"
-        >
-          {siteConfig.siteName}
+    <nav className="border-b border-[--color-rule] bg-white px-6 py-4">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+        {/* Logo — styled text matching original "7th ST. CONCERTS" */}
+        <Link href="/" className="flex flex-col leading-none">
+          <span className="font-[--font-display] text-2xl md:text-3xl tracking-tight text-[--color-ink]">
+            7th ST.
+          </span>
+          <span className="text-[0.6rem] md:text-xs font-[--font-body] tracking-[0.25em] uppercase text-[--color-ink]">
+            Concerts
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -41,8 +43,8 @@ export default function Nav() {
               href={link.href}
               className={
                 isActive(link.href)
-                  ? "text-[--color-ink] font-bold"
-                  : "hover:text-[--color-ink] transition-colors"
+                  ? "text-[--color-navy] font-bold"
+                  : "hover:text-[--color-navy] transition-colors"
               }
             >
               {link.label}
@@ -91,8 +93,8 @@ export default function Nav() {
               onClick={() => setMenuOpen(false)}
               className={
                 isActive(link.href)
-                  ? "text-[--color-ink] font-bold"
-                  : "hover:text-[--color-ink] transition-colors"
+                  ? "text-[--color-navy] font-bold"
+                  : "hover:text-[--color-navy] transition-colors"
               }
             >
               {link.label}

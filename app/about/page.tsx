@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <div className="px-6 py-16">
       <div className="max-w-2xl mx-auto space-y-12">
-        <h1 className="text-5xl font-[--font-display]">About</h1>
+        <h1 className="text-5xl font-[--font-display] text-[--color-magenta]">About</h1>
 
         {/* Mission */}
         <section className="space-y-4">
@@ -28,7 +28,7 @@ export default function AboutPage() {
         {/* Kristin's story */}
         <section className="pt-8 border-t border-[--color-rule] space-y-4">
           <h2 className="text-3xl font-[--font-display]">About Kristin Olson</h2>
-          <p className="text-sm text-[--color-accent] font-bold uppercase tracking-widest">
+          <p className="text-sm text-[--color-magenta] font-bold uppercase tracking-widest">
             Artistic &amp; Executive Director
           </p>
           <p className="text-[--color-ink-soft] leading-relaxed text-lg">
@@ -60,25 +60,25 @@ export default function AboutPage() {
             and ensembles to Charlotte audiences in intimate and welcoming
             venues.
           </p>
-          <div className="bg-[--color-accent-light] rounded-lg p-6 space-y-3">
+          <div className="bg-[--color-bg-alt] rounded-lg p-6 space-y-3">
             <p className="font-[--font-display] text-lg font-semibold">
               Every ticketed event includes:
             </p>
             <ul className="space-y-2 text-[--color-ink-soft]">
               <li className="flex gap-2">
-                <span className="text-[--color-accent] font-bold">·</span>
+                <span className="text-[--color-magenta] font-bold">·</span>
                 Free parking
               </li>
               <li className="flex gap-2">
-                <span className="text-[--color-accent] font-bold">·</span>
+                <span className="text-[--color-magenta] font-bold">·</span>
                 Complimentary pre-concert happy hour
               </li>
               <li className="flex gap-2">
-                <span className="text-[--color-accent] font-bold">·</span>
+                <span className="text-[--color-magenta] font-bold">·</span>
                 75-minute concert without intermission
               </li>
               <li className="flex gap-2">
-                <span className="text-[--color-accent] font-bold">·</span>
+                <span className="text-[--color-magenta] font-bold">·</span>
                 Free post-concert reception with the artists
               </li>
             </ul>
@@ -124,7 +124,7 @@ export default function AboutPage() {
             contact us at{" "}
             <a
               href={`mailto:${siteConfig.contactEmail}`}
-              className="text-[--color-accent] hover:underline"
+              className="text-[--color-magenta] hover:underline"
             >
               {siteConfig.contactEmail}
             </a>{" "}

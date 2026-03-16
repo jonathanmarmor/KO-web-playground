@@ -13,8 +13,8 @@ function formatDate(dateStr: string): string {
 
 function NextEventSpotlight({ event }: { event: Event }) {
   return (
-    <div className="border border-[--color-rule] bg-[--color-accent-light] rounded-lg p-8 space-y-3">
-      <p className="text-sm font-bold tracking-widest uppercase text-[--color-accent]">
+    <div className="border border-[--color-rule] bg-[--color-bg-alt] rounded-lg p-8 space-y-3">
+      <p className="text-sm font-bold tracking-widest uppercase text-[--color-magenta]">
         {formatDate(event.date)} · {event.time}
       </p>
       <h3 className="text-3xl font-[--font-display]">{event.title}</h3>
@@ -30,7 +30,7 @@ function NextEventSpotlight({ event }: { event: Event }) {
       <div className="pt-2">
         <Link
           href={`/events/${event.slug}`}
-          className="inline-block px-6 py-2 bg-[--color-accent] text-white text-sm rounded hover:opacity-90 transition-opacity"
+          className="inline-block px-6 py-2 bg-[--color-magenta] text-white text-sm rounded-full hover:opacity-90 transition-opacity"
         >
           {event.ticketUrl ? "Get Tickets" : "Learn More"}
         </Link>
@@ -49,7 +49,7 @@ export default function Home() {
       {/* Hero */}
       <section className="px-6 py-20 text-center border-b border-[--color-rule]">
         <div className="max-w-2xl mx-auto space-y-6">
-          <h1 className="text-5xl md:text-7xl font-[--font-display] font-medium leading-tight">
+          <h1 className="text-5xl md:text-7xl font-[--font-display] font-medium leading-tight text-[--color-magenta]">
             {siteConfig.siteName}
           </h1>
           <p className="text-xl text-[--color-ink-soft] leading-relaxed">
@@ -57,7 +57,7 @@ export default function Home() {
           </p>
           <Link
             href="/events"
-            className="inline-block px-8 py-3 bg-[--color-accent] text-white rounded hover:opacity-90 transition-opacity"
+            className="inline-block px-8 py-3 bg-[--color-magenta] text-white rounded-full hover:opacity-90 transition-opacity"
           >
             See Upcoming Events
           </Link>
@@ -84,9 +84,9 @@ export default function Home() {
                 <Link
                   key={event.slug}
                   href={`/events/${event.slug}`}
-                  className="block border border-[--color-rule] bg-[--color-accent-light] rounded-lg p-6 space-y-2 hover:border-[--color-accent] transition-colors"
+                  className="block border border-[--color-rule] bg-[--color-bg-alt] rounded-lg p-6 space-y-2 hover:border-[--color-magenta] transition-colors"
                 >
-                  <p className="text-xs font-bold tracking-widest uppercase text-[--color-accent]">
+                  <p className="text-xs font-bold tracking-widest uppercase text-[--color-magenta]">
                     {formatDate(event.date)}
                   </p>
                   <h3 className="text-xl font-[--font-display]">
@@ -96,7 +96,7 @@ export default function Home() {
                     {event.venue}
                   </p>
                   {event.isFree && (
-                    <span className="inline-block text-xs font-bold text-[--color-accent] uppercase tracking-widest">
+                    <span className="inline-block text-xs font-bold text-[--color-magenta] uppercase tracking-widest">
                       Free
                     </span>
                   )}
@@ -106,7 +106,7 @@ export default function Home() {
             <div className="text-center">
               <Link
                 href="/events"
-                className="text-[--color-accent] hover:underline"
+                className="text-[--color-magenta] hover:underline"
               >
                 View all events →
               </Link>
@@ -126,7 +126,7 @@ export default function Home() {
           </p>
           <Link
             href="/community"
-            className="text-[--color-accent] hover:underline"
+            className="text-[--color-magenta] hover:underline"
           >
             Learn about our outreach →
           </Link>
